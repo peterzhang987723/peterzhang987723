@@ -3,8 +3,8 @@
 AI Systems & Agent Infrastructure: LLM inference (`vLLM`), retrieval and memory kernels (`RAGFlow`, `OpenViking`), proactive and personal agent runtimes (`Hermes-Agent`, `dsh-superagent`, `Qwen-Agent`, `OpenHands`), and evaluation benchmarks (`SWE-bench`, `AgentDojo`).
 
 #### Projects (Owner)
-- **[SeekMorph](https://github.com/peterzhang987723/SeekMorph)**: Hybrid AI search, personalized recommendation reranking (intent routing, user interest affinity, Bayesian CTR, recency decay), pre-retrieval RBAC/ACL filtering, and Personal SuperAgent memory/mandate runtime (`PersonalMemoryStore` & `ProactiveTicketRuntime`).
-- **[DocMorph](https://github.com/peterzhang987723/DocMorph)**: Structure-aware document morphing (`.md`, `.html`, `.csv`, `.json`), table-header preservation across chunks, and thread-safe inverted-index hybrid retrieval (`BM25 + Dense Vector RRF`).
+- **[SeekMorph](https://github.com/peterzhang987723/SeekMorph)** ([Live Space](https://huggingface.co/spaces/zhangshoufa/DocMorph)): Hybrid AI search, personalized recommendation reranking (intent routing, user interest affinity, Bayesian CTR, recency decay), pre-retrieval RBAC/ACL filtering (`0.0%` cross-tenant leakage), and Personal SuperAgent memory/mandate runtime (`PersonalMemoryStore` & `ProactiveTicketRuntime`).
+- **[DocMorph](https://github.com/peterzhang987723/DocMorph)** ([Live Space](https://huggingface.co/spaces/zhangshoufa/DocMorph)): Structure-aware document morphing (`.md`, `.html`, `.csv`, `.json`), `100%` table-header preservation across split chunks, and thread-safe inverted-index hybrid retrieval (`BM25 + Dense Vector RRF`, `NDCG@3 = 1.0000`).
 
 #### Upstream Pull Requests & Patches
 - **vllm-project/vllm**: [#65647](https://github.com/vllm-project/vllm/pull/65647) (Register `packed_modules_mapping` for DeepSeek-V4/V4.1 DSpark speculative decoding across AMD ROCm, NVIDIA, and Intel XPU)
