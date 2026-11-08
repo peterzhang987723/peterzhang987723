@@ -1,4 +1,4 @@
-# Hi there, I'm Shoufa Zhang (张守法) 👋
+# Hi there, I'm Shoufa Zhang 👋
 
 **AI Infrastructure & Autonomous Agent Systems Engineer / Researcher**  
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--5314--6968-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0000-5314-6968)
