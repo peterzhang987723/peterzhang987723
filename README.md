@@ -1,4 +1,4 @@
-# Shoufa Zhang (张守法)
+# Shoufa Zhang
 
 **AI Systems & Autonomous Agent Researcher**  
 LLM Inference Kernels (`vLLM` / DeepSeek-V4) · Multi-Agent & RAG Systems (`AgentScope` / DeepSeek SuperAgent) · Agentic Benchmark Verification
