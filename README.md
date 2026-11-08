@@ -5,19 +5,22 @@
 [![Zenodo DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23839673-blue)](https://doi.org/10.5281/zenodo.23839673)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-AgentDojo%20Audit-yellow)](https://huggingface.co/datasets/zhangshoufa/AgentDojo-Reference-Solution-Audit)
 
-I focus on **LLM Inference Acceleration (Speculative Decoding, Quantization, Multi-Backend Kernels)**, **Autonomous Software Engineering Agents**, and **Rigorous Evaluation of Agentic Benchmarks**.
+I focus on **LLM Inference Acceleration (Speculative Decoding, Quantization, Heterogeneous GPU/XPU Kernels)**, **Autonomous Multi-Agent Orchestration & Enterprise Multi-Tenant RAG**, and **Rigorous Formal Evaluation of Agentic Benchmarks**.
 
 ---
 
 ## 🔬 1. Research & Benchmark Impact
 
 - 📄 **When Reference Solutions Pass but Violate Explicit Goals: An AgentDojo Case Study**
-  - **Under Review at Top-Tier Journals (CCF-A)**: *IEEE TPAMI* (`TPAMI-2026-11-4662`), *IEEE TSE* (`TSE-2026-11-1219`), and *Artificial Intelligence* (`ARTINT-D-26-01965`).
-  - **Upstream Impact on ETH Zurich's AgentDojo**: Reported and diagnosed ground-truth specification violations in [`ethz-spylab/agentdojo#244`](https://github.com/ethz-spylab/agentdojo/issues/244), directly driving the upstream fix across all 7 benchmark suite versions ([`ethz-spylab/agentdojo#247`](https://github.com/ethz-spylab/agentdojo/pull/247)).
-  - **Open Artifacts**:
-    - **CERN Zenodo (OpenAIRE Indexed)**: [`10.5281/zenodo.23839673`](https://doi.org/10.5281/zenodo.23839673)
-    - **Hugging Face Dataset & Audit Suite**: [`zhangshoufa/AgentDojo-Reference-Solution-Audit`](https://huggingface.co/datasets/zhangshoufa/AgentDojo-Reference-Solution-Audit) (**147+ downloads**)
-    - **ModelScope**: [`shoufanzhang/AgentDojo-Reference-Solution-Audit`](https://modelscope.cn/datasets/shoufanzhang/AgentDojo-Reference-Solution-Audit)
+  - **Top-Tier Journal Submissions (CCF-A / Flagship)**:
+    - *Artificial Intelligence* (`ARTINT-D-26-01965`, CCF-A) — **`With Editor`**
+    - *IEEE TPAMI* (`TPAMI-2026-11-4662`, IF 20.8) — **`Under Review`**
+    - *IEEE TSE* (`TSE-2026-11-1219`, Top SE Journal) — **`Under Review`**
+  - **Upstream Ground-Truth Correction on ETH Zurich's AgentDojo**: Reported and formally diagnosed ground-truth specification violations in [`ethz-spylab/agentdojo#244`](https://github.com/ethz-spylab/agentdojo/issues/244), directly driving the upstream fix across all 7 benchmark suite versions ([`ethz-spylab/agentdojo#247`](https://github.com/ethz-spylab/agentdojo/pull/247)).
+  - **Open Science Artifacts**:
+    - **CERN Zenodo (OpenAIRE Indexed, Immutable DOI)**: [`10.5281/zenodo.23839673`](https://doi.org/10.5281/zenodo.23839673)
+    - **Hugging Face Dataset & Audit Suite**: [`zhangshoufa/AgentDojo-Reference-Solution-Audit`](https://huggingface.co/datasets/zhangshoufa/AgentDojo-Reference-Solution-Audit) (**171+ downloads**)
+    - **ModelScope (魔搭社区)**: [`shoufanzhang/AgentDojo-Reference-Solution-Audit`](https://modelscope.cn/datasets/shoufanzhang/AgentDojo-Reference-Solution-Audit)
 
 ---
 
@@ -30,7 +33,11 @@ I focus on **LLM Inference Acceleration (Speculative Decoding, Quantization, Mul
 - **[`vllm#66282`](https://github.com/vllm-project/vllm/pull/66282)** — *Add `packed_modules_mapping` and MTP quantization alignment to DeepSeek-V4 NVIDIA/XPU Multi-Token Prediction*
 - **[`vllm#66279`](https://github.com/vllm-project/vllm/pull/66279)** — *Prefill `DiffusionGemma` image tokens bidirectionally across attention backends*
 
-### 🤖 Autonomous Agent Frameworks, RAG & Benchmarks
+### 🤖 Autonomous Agent Frameworks, Enterprise RAG & Benchmarks
+- **AgentScope (`agentscope-ai/agentscope` ⭐ 35.5k+)**:
+  - **[`#3852`](https://github.com/agentscope-ai/agentscope/pull/3852)** — *Isolate scoped `KnowledgeBase` record IDs across shared collections* (`Fixes #3475`)
+    - Resolved a critical multi-tenant data corruption vulnerability where overlapping `document_id` values silently overwrite chunks of other tenants sharing the same collection; introduced collision-free `_record_identity_key` across **Qdrant, MilvusLite, Elasticsearch, and MongoDB**.
+  - **[`#3850`](https://github.com/agentscope-ai/agentscope/pull/3850)** — *Drop removed `dream_topics_step` from embedded ReMe long-term memory config* (`Fixes #3811`)
 - **OpenHands (`OpenHands/software-agent-sdk`)**: **[`#6463`](https://github.com/OpenHands/software-agent-sdk/pull/6463)** — *Surface corrupt `hooks.json` diagnostics with structured traceback logging in `agent-server`* (`Fixes #6376`)
 - **SWE-bench (`swe-bench/SWE-bench` ⭐ 6.1k+)**: **[`#712`](https://github.com/SWE-bench/SWE-bench/pull/712)** — *Prevent printed `PASSED` stdout lines from overwriting `pytest` `FAILED` status in harness log parsers* (`Fixes #708`)
 - **RAGFlow (`infiniflow/ragflow` ⭐ 75k+)**: **[`#21997`](https://github.com/infiniflow/ragflow/pull/21997)** — *Decouple macOS `pdfium-static` dependency verification from Linux-only bundled `libc++.a`* (`Fixes #21975`)
@@ -45,11 +52,11 @@ I focus on **LLM Inference Acceleration (Speculative Decoding, Quantization, Mul
 
 ---
 
-## 🛠️ 3. Featured Open-Source Projects
+## 🛠️ 3. Featured Open-Source Projects & Kernels
 
 - **[`SeekMorph`](https://github.com/peterzhang987723/SeekMorph)** — *Hybrid AI Search, Recommendation & Proactive SuperAgent Memory/Ticket Governance Engine*
   - Query intent routing (`exact_lookup` / `semantic_qa` / `exploratory_rec`), pre-retrieval RBAC/ACL tenant filtering, thread-safe incremental inverted index, multi-objective personalized reranking, and `ProactiveTicketRuntime` state machine.
 - **[`DocMorph`](https://github.com/peterzhang987723/DocMorph)** — *Structure-Aware Multi-Format Document Parser & Table-Header-Preserving Chunker*
   - DOM/AST parsing across `.md`, `.html`, `.csv`, `.tsv`, `.json`, and `.txt` with cross-chunk table-header preservation, hierarchical breadcrumb injection, and Reciprocal Rank Fusion (RRF) hybrid retrieval.
-- **[`dsh-superagent-prototype`](https://github.com/peterzhang987723/dsh-superagent-prototype)** — *Proactive Ticket State-Machine & GitHub Trigger Enhancements*
-  - Fixed phantom `delivered: true` states on refused ticket inputs and added title-level `@agent` mention detection across issue/PR triggers (`184/184` `vitest` suite passing).
+- **[`dsh-superagent-prototype`](https://github.com/peterzhang987723/dsh-superagent-prototype)** — *DeepSeek Proactive Autonomous SuperAgent Task Graph & Policy Hardening*
+  - Enforced `refuseInputs` boundary checks across task graph tools, preserved `@agent` decision routing in title mentions, and implemented resilient bracket-skipping JSON extraction for chain-of-thought models (**512/512** unit tests passing across all 24 `vitest` suites).
