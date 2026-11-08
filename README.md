@@ -17,7 +17,8 @@ LLM Inference Kernels (`vLLM` / DeepSeek-V4) · Multi-Agent & RAG Systems (`Agen
   - [**`#65647`**](https://github.com/vllm-project/vllm/pull/65647) (`Fixes #65618`): Registered `packed_modules_mapping` and layer bounds for DSpark DeepSeek-V4/V4.1 Eagle draft models across AMD ROCm, NVIDIA CUDA, and Intel XPU. Restored speculative acceptance length from **`1.00` → `2.88–3.20`** (**99% GSM8K**), verified on **8× AMD Instinct MI308X (`gfx942`, TP8+EP8)**.
   - [**`#66283`**](https://github.com/vllm-project/vllm/pull/66283) · [**`#66282`**](https://github.com/vllm-project/vllm/pull/66282) · [**`#66279`**](https://github.com/vllm-project/vllm/pull/66279): KV-only RoPE context insertion for DSpark MLA, DeepSeek-V4 Multi-Token Prediction (MTP) quantization alignment, and bidirectional image token prefill for `DiffusionGemma`.
 
-- **Multi-Tenant Vector Isolation & Long-Term Memory in [`agentscope-ai/agentscope`](https://github.com/agentscope-ai/agentscope) (⭐ 35.5k)**
+- **Multi-Tenant Vector Isolation, Long-Term Memory & SSE Resiliency in [`agentscope-ai/agentscope`](https://github.com/agentscope-ai/agentscope) (⭐ 35.5k)**
+  - [**`#3854`**](https://github.com/agentscope-ai/agentscope/pull/3854) (`Fixes #3855`): Propagated message bus subscription failures and eliminated 5-second startup hangs and silent mid-stream truncations in session SSE event streams.
   - [**`#3852`**](https://github.com/agentscope-ai/agentscope/pull/3852) (`Fixes #3475`): Prevented cross-tenant chunk overwrites when scoped `KnowledgeBase` instances share a collection with overlapping `document_id`s; designed collision-free `_record_identity_key` derivation across **Qdrant, MilvusLite, Elasticsearch, and MongoDB**.
   - [**`#3850`**](https://github.com/agentscope-ai/agentscope/pull/3850) (`Fixes #3811`): Fixed embedded **ReMe** long-term memory middleware startup crash on `reme-ai >= 0.4.1.12`.
 
