@@ -32,7 +32,7 @@ LLM Inference Kernels (`vLLM` / DeepSeek-V4) · Multi-Agent & RAG Systems (`Agen
   - **Paper**: *"When Reference Solutions Pass but Violate Explicit Goals: An AgentDojo Case Study"* — **Sole Author**. IEEE TPAMI (`TPAMI-2026-11-4662`) and IEEE TSE (`TSE-2026-11-1219`) submission records, with IEEE Computer Society–formatted revision files prepared.
   - **Upstream**: Reported the year-truncation evaluator blind spot in [`ethz-spylab/agentdojo#244`](https://github.com/ethz-spylab/agentdojo/issues/244). An upstream contributor proposed a related reference-year fix and regression coverage across seven suite versions in [open PR `#247`](https://github.com/ethz-spylab/agentdojo/pull/247).
   - **Artifacts**: [CERN Zenodo (`10.5281/zenodo.23839673`)](https://doi.org/10.5281/zenodo.23839673) (**19** unique downloads) · [Hugging Face Dataset](https://huggingface.co/datasets/zhangshoufa/AgentDojo-Reference-Solution-Audit) (**185** downloads) · [ModelScope](https://modelscope.cn/datasets/shoufanzhang/AgentDojo-Reference-Solution-Audit) (**20** downloads). Counts as of November 11, 2026.
-  - **ScienceDB**: Data-only revision resubmitted on November 11, 2026; **under review**.
+  - **ScienceDB**: The AgentDojo research dataset has a public DOI registered with DataCite ([`10.57760/sciencedb.0189k`](https://doi.org/10.57760/sciencedb.0189k)).
 
 ---
 
